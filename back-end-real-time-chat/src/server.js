@@ -3,10 +3,10 @@ import bodyParser from 'body-parser';
 import { db } from './db';
 import { routes } from './routes';
 import * as admin from 'firebase-admin';
-import credentials from './credential.json';
+import credentials from './credentials.json';
 
 admin.initializeApp({
-  credential: admin.credential.cert(admin.credentials),
+  credential: admin.credential.cert(credentials),
 });
 
 const app = express();
